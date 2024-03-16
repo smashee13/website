@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    background-image: url('background.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire background */
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+.logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 50px; /* Adjust top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+.logo img {
+    max-width: 200px; /* Adjust maximum width of the logo */
+}
+
+.content {
+    text-align: center; /* Center text horizontally */
+    color: white; /* Text color */
+}
+
+h1 {
+    color: white; /* Header color */
+}
+
+p {
+    color: white; /* Paragraph color */
+    line-height: 1.6; /* Line height */
+}
