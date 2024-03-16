@@ -1,35 +1,110 @@
+/* From the :root element you can easily change the colors of the design, its size and so on. */
+:root {
+    /* You can change the font family in the whole design here. (You need to add the font family to the codes.) */
+    --font_family: 'Inter', sans-serif;
+
+    /* You can change the font size here, is proportional to all texts. */
+    --font_size: 16px;
+
+    /* You can change the background color by typing the color code. (If you do not enter a background-image image, the background-color will be active.) */
+    --background_color: #000;
+    --background_image: url("background.jpg");
+
+    /* You can change the frame thickness and color of the picture by typing the number of pixels and the color code. */
+    --image_border_color: #fff;
+    --image_border_px: 3px;
+
+    /* You can change the width and size of the picture by typing the number of pixels. */
+    --image_width: 140px;
+    --image_height: 140px;
+
+    /* You can change the colors of the title and description section by typing the color codes. */
+    --title_color: #fff;
+    --description_color: #f1c40f;
+
+    /* You can change the colors of social media icons by changing the color code. */
+    --svg_color: #fff;
+}
+
 body {
+    font: var(--font_size) var(--font_family);
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 100vh;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Remove default margin */
-    background-image: url('background.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire background */
-    font-family: Arial, sans-serif; /* Default font */
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: var(--background_color) var(--background_image) no-repeat center;
 }
 
-.logo {
-    position: absolute; /* Position the logo absolutely */
-    top: 50px; /* Adjust top position as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+.flex_column_center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo img {
-    max-width: 200px; /* Adjust maximum width of the logo */
+.flex_row_center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.content {
-    text-align: center; /* Center text horizontally */
-    color: white; /* Text color */
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-h1 {
-    color: white; /* Header color */
+.title_text h1 {
+    color: var(--title_color);
+    font-size: 2em;
 }
 
-p {
-    color: white; /* Paragraph color */
-    line-height: 1.6; /* Line height */
+@media (max-width: 768px) {
+    .h_item {
+        width: 92vw;
+        text-align: center;
+    }
+}
+
+.svg_list {
+    padding-top: 1em;
+}
+
+.svg_item {
+    width: 2.1em;
+    height: 2.1em;
+    cursor: pointer;
+}
+
+.svg_item:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease;
+}
+
+.svg_item+.svg_item {
+    margin-left: 1em;
+}
+
+.svg_item svg {
+    fill: var(--svg_color);
+}
+
+.img {
+    padding-top: 1em;
+}
+
+.img img {
+    height: var(--image_height);
+    width: var(--image_width);
+    border: var(--image_border_px) solid var(--image_border_color);
+    border-radius: 50%;
+    margin-bottom: 0.5em;
 }
