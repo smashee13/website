@@ -35,6 +35,9 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     background: var(--background_color) var(--background_image) no-repeat center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 .flex_column_center {
